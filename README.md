@@ -214,7 +214,7 @@ Booking.pending    # => #<ActiveRecord::Relation:0x0.....> (WHERE status_cd = 3)
   default `with:` is set to `[:attribute, :dirty, :scope]`.
 
   1. `:attribute` - generates the `male?` and `male!` accessor methods
-  2. `:dirty` - adds the `gender_was` and `gender_changed?` dirty methods
+  2. `:dirty` - adds the `gender_before_last_save` and `saved_change_to_gender?` dirty methods
   3. `:scope` - adds the class level scopes, **if** the `scope` method is present
 
 - By default the value is set to `nil` when the user sets an invalid value,
